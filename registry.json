@@ -1,7 +1,7 @@
 {
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "name": "designbycode",
-    "homepage": "http://localhost:8000",
+    "homepage": "https://designbycode.co.za",
 
     "items": [
         {
@@ -2882,7 +2882,7 @@
         },
         {
             "name": "use-hover",
-            "path": "resources/js/registry/new-york/hooks/use-hover.ts",
+            "path": "resources/js/registry/new-york/hooks/use-hover.tsx",
             "type": "registry:hook",
             "meta": {
                 "category": "hooks",
@@ -2896,14 +2896,14 @@
             "component": "useHover",
             "files": [
                 {
-                    "path": "resources/js/registry/new-york/hooks/use-hover.ts",
+                    "path": "resources/js/registry/new-york/hooks/use-hover.tsx",
                     "type": "registry:hook"
                 }
             ]
         },
         {
             "name": "text-animator",
-            "path": "resources/registry/new-york/components/ui/animations/text-animator.tsx",
+            "path": "resources/js/registry/new-york/components/ui/animations/text-animator.tsx",
             "type": "registry:ui",
             "meta": {
                 "category": "animations",
@@ -2916,8 +2916,110 @@
             "component": "TextAnimator",
             "files": [
                 {
-                    "path": "resources/registry/new-york/components/ui/animations/text-animator.tsx",
+                    "path": "resources/js/registry/new-york/components/ui/animations/text-animator.tsx",
                     "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "use-dark-mode",
+            "path": "resources/js/registry/new-york/hooks/use-dark-mode.ts",
+            "type": "registry:hook",
+            "meta": {
+                "category": "hooks",
+                "version": "1.0.0"
+            },
+            "title": "Use Dark Mode",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": ["react"],
+            "devDependencies": [],
+            "component": "useDarkMode",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/hooks/use-dark-mode.ts",
+                    "type": "registry:hook"
+                }
+            ]
+        },
+        {
+            "name": "animated-tabs",
+            "path": "resources/js/registry/new-york/components/ui/motion/animated-tabs.tsx",
+            "type": "registry:ui",
+            "meta": {
+                "category": "components",
+                "version": "1.0.0"
+            },
+            "title": "Animated Tabs",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+            "component": "AnimatedTabs",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/components/ui/motion/animated-tabs.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "pixel-canvas",
+            "path": "resources/js/registry/new-york/components/ui/canvas/pixel-canvas.tsx",
+            "type": "registry:ui",
+            "meta": {
+                "category": "components",
+                "version": "1.0.0"
+            },
+            "title": "Pixel Canvas",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": [],
+            "component": "PixelCanvas",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/components/ui/canvas/pixel-canvas.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "waves-three",
+            "path": "resources/js/registry/new-york/components/ui/threejs/waves-three.tsx",
+            "type": "registry:ui",
+            "meta": {
+                "category": "components",
+                "version": "1.0.0"
+            },
+            "title": "Waves Three",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": ["three", "clsx", "tailwind-merge"],
+            "component": "WavesThree",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/components/ui/threejs/waves-three.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "use-headroom",
+            "path": "resources/js/registry/new-york/hooks/use-headroom.ts",
+            "type": "registry:hook",
+            "meta": {
+                "category": "hooks",
+                "version": "1.0.0"
+            },
+            "title": "Use Headroom",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": ["react"],
+            "devDependencies": [],
+            "component": "useHeadroom",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/hooks/use-headroom.ts",
+                    "type": "registry:hook"
                 }
             ]
         }
