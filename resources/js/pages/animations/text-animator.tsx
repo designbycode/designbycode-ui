@@ -3,6 +3,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CodeBlock } from '@/components/ui/code-block';
+
 import {
     Dialog,
     DialogContent,
@@ -21,6 +22,7 @@ import type {
 } from '@/registry/new-york/components/ui/animations/text-animator';
 import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
 import { useHover } from '@/registry/new-york/hooks/use-hover';
+import { index as animationsIndex } from '@/routes/animations';
 
 const baseAnimations: {
     name: AnimationType;
@@ -164,130 +166,144 @@ const categories = [...new Set(baseAnimations.map((a) => a.category))];
 
 export default function AnimationAnimator() {
     return (
-        <Wrapper className="min-h-screen">
-            <div className="mb-12">
-                <div className="grid gap-4 lg:grid-cols-3">
-                    <div className={`col-span-full lg:col-span-2`}>
-                        <h1 className="mb-4 text-3xl font-bold text-balance">
-                            Text Animations
-                        </h1>
-                        <p className="mb-6 max-w-4xl text-xl text-balance text-muted-foreground">
-                            Scroll to see animations trigger as they come into
-                            view. Click any animation card to view and copy the
-                            code. 102+ animations available.
-                        </p>
-                        <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
-                            About
-                        </h2>
-                        <p className="mb-4 max-w-4xl text-balance text-muted-foreground">
-                            <TextAnimator
-                                text="TextAnimator"
-                                animation={`zap`}
-                                trigger={`scrollTrigger`}
-                                duration={0.8}
-                                repeat={-1}
-                                yoyo
-                                className="font-bold text-primary"
-                            />{' '}
-                            is a powerful React component that creates stunning
-                            character-level text animations using GSAP
-                            (GreenSock Animation Platform). It splits your text
-                            into individual characters and applies smooth,
-                            performant animations to each one.
-                        </p>
+        <MainLayout
+            breadcrumbs={[
+                { title: 'Animations', href: animationsIndex() },
+                { title: 'Text Animator', href: '#' },
+            ]}
+        >
+            <Wrapper className="min-h-screen">
+                <div className="mb-12">
+                    <div className="grid gap-4 lg:grid-cols-3">
+                        <div className={`col-span-full lg:col-span-2`}>
+                            <h1 className="mb-4 text-3xl font-bold text-balance">
+                                Text Animations
+                            </h1>
+                            <p className="mb-6 max-w-4xl text-xl text-balance text-muted-foreground">
+                                Scroll to see animations trigger as they come
+                                into view. Click any animation card to view and
+                                copy the code. 102+ animations available.
+                            </p>
+                            <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
+                                About
+                            </h2>
+                            <p className="mb-4 max-w-4xl text-balance text-muted-foreground">
+                                <TextAnimator
+                                    text="TextAnimator"
+                                    animation={`zap`}
+                                    trigger={`scrollTrigger`}
+                                    duration={0.8}
+                                    repeat={-1}
+                                    yoyo
+                                    className="font-bold text-primary"
+                                />{' '}
+                                is a powerful React component that creates
+                                stunning character-level text animations using
+                                GSAP (GreenSock Animation Platform). It splits
+                                your text into individual characters and applies
+                                smooth, performant animations to each one.
+                            </p>
+                        </div>
+                        <div
+                            className={`relative isolate col-span-full lg:col-span-1`}
+                        >
+                            <Card className="relative z-10 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/30">
+                                <CardContent>
+                                    <ul className="list-disc text-muted-foreground">
+                                        <li>102+ built-in animation types</li>
+                                        <li>
+                                            Three trigger modes: click, hover,
+                                            scroll
+                                        </li>
+                                        <li>
+                                            Full GSAP timeline control via ref
+                                        </li>
+                                        <li>
+                                            ScrollTrigger integration for
+                                            scroll-based animations
+                                        </li>
+                                        <li>
+                                            Customizable easing, duration, and
+                                            stagger
+                                        </li>
+                                        <li>Loop and yoyo support</li>
+                                        <li>
+                                            TypeScript support with full type
+                                            definitions
+                                        </li>
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                            <Card className="absolute inset-x-0 -translate-y-5 scale-80 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/15" />
+                            <Card className="absolute inset-x-0 -translate-y-9 scale-90 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/20" />
+                        </div>
                     </div>
-                    <div className={`col-span-full lg:col-span-1`}>
-                        <Card className="p-6">
-                            <CardContent
 
-                            >
-                                <ul className="list-disc text-muted-foreground">
-                                    <li>102+ built-in animation types</li>
-                                    <li>
-                                        Three trigger modes: click, hover,
-                                        scroll
-                                    </li>
-                                    <li>Full GSAP timeline control via ref</li>
-                                    <li>
-                                        ScrollTrigger integration for
-                                        scroll-based animations
-                                    </li>
-                                    <li>
-                                        Customizable easing, duration, and
-                                        stagger
-                                    </li>
-                                    <li>Loop and yoyo support</li>
-                                    <li>
-                                        TypeScript support with full type
-                                        definitions
-                                    </li>
-                                </ul>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-
-                <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
-                    Installation
-                </h2>
-                <PackageManagerSelect
-                    className={`my-4`}
-                    codes={{
-                        npm: 'npm shadcn@latest add @designbycode/text-animator',
-                        yarn: 'yarn shadcn@latest add @designbycode/text-animator',
-                        pnpm: 'pnpm shadcn@latest add @designbycode/text-animator',
-                        bun: 'bunx --bun shadcn@latest add @designbycode/text-animator',
-                    }}
-                />
-                <p className="text-zinc-500">
-                    Prerequisites: Ensure you have{' '}
-                    <code className="rounded bg-muted px-1 text-muted-foreground">
-                        gsap
-                    </code>{' '}
-                    and{' '}
-                    <code className="rounded bg-muted px-1 text-muted-foreground">
-                        @gsap/react
-                    </code>{' '}
-                    installed.
-                </p>
-
-                <h2 className="mt-8 mb-4 text-2xl font-semibold text-foreground">
-                    Code Examples
-                </h2>
-
-                <div className="mb-6">
-                    <p className="text-balance text-muted-foreground">
-                        Click on any animation card below to view and copy the
-                        code.
-                    </p>
-                </div>
-            </div>
-
-            {categories.map((category) => (
-                <section key={category} className="mb-12">
-                    <h2 className="mb-6 text-2xl font-semibold text-foreground">
-                        {category}
+                    <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
+                        Installation
                     </h2>
-                    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-                        {demoAnimations
-                            .filter((a) => a.category === category)
-                            .map((anim) => (
-                                <AnimationCard key={anim.name} anim={anim} />
-                            ))}
+                    <PackageManagerSelect
+                        className={`my-4`}
+                        codes={{
+                            npm: 'npm shadcn@latest add @designbycode/text-animator',
+                            yarn: 'yarn shadcn@latest add @designbycode/text-animator',
+                            pnpm: 'pnpm shadcn@latest add @designbycode/text-animator',
+                            bun: 'bunx --bun shadcn@latest add @designbycode/text-animator',
+                        }}
+                    />
+                    <p className="text-zinc-500">
+                        Prerequisites: Ensure you have{' '}
+                        <code className="rounded bg-muted px-1 text-muted-foreground">
+                            gsap
+                        </code>{' '}
+                        and{' '}
+                        <code className="rounded bg-muted px-1 text-muted-foreground">
+                            @gsap/react
+                        </code>{' '}
+                        installed.
+                    </p>
+
+                    <h2 className="mt-8 mb-4 text-2xl font-semibold text-foreground">
+                        Code Examples
+                    </h2>
+
+                    <div className="mb-6">
+                        <p className="text-balance text-muted-foreground">
+                            Click on any animation card below to view and copy
+                            the code.
+                        </p>
                     </div>
-                </section>
-            ))}
-        </Wrapper>
+                </div>
+
+                {categories.map((category) => (
+                    <section key={category} className="mb-12">
+                        <h2 className="mb-6 text-2xl font-semibold text-foreground">
+                            {category}
+                        </h2>
+                        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+                            {demoAnimations
+                                .filter((a) => a.category === category)
+                                .map((anim) => (
+                                    <AnimationCard
+                                        key={anim.name}
+                                        anim={anim}
+                                    />
+                                ))}
+                        </div>
+                    </section>
+                ))}
+            </Wrapper>
+        </MainLayout>
     );
 }
 
 function AnimationCard({
-                           anim,
-                       }: {
+    anim,
+}: {
     anim: { name: AnimationType; text: string; category: string };
 }) {
     const ref = useRef<TextAnimatorRef>(null);
-    const [isHovered, hoverRef] = useHover();
+    const { isHovered, hoverRef } = useHover();
     const { copy } = useCopyToClipboard();
 
     const codeExample = `
@@ -385,5 +401,3 @@ function AnimationCard({
 }
 
 AnimationAnimator.displayName = 'TextAnimator';
-
-AnimationAnimator.layout = MainLayout;

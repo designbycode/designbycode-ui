@@ -2,8 +2,7 @@ import TextAnimator from '@/registry/new-york/components/ui/animations/text-anim
 import WavesThree from '@/registry/new-york/components/ui/threejs/waves-three';
 
 
-export default function MainHero()
-{
+export default function MainHero() {
     return (
         <div className={`relative rounded-2xl`}>
             <div

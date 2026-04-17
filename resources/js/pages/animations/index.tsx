@@ -1,34 +1,58 @@
 import { Link } from '@inertiajs/react';
+import { Card } from '@/components/ui/card';
 import Wrapper from '@/components/wrapper';
 import MainLayout from '@/layouts/main-layout';
+import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
+import WavesThree from '@/registry/new-york/components/ui/threejs/waves-three';
 import { show } from '@/routes/animations';
 
 export default function AnimationIndex() {
     return (
-        <Wrapper className={`min-h-screen`}>
-            <h1 className="mb-2 text-3xl font-semibold">Animations</h1>
-            <ul className={`space-y-2`}>
-                <li>
+        <MainLayout
+            breadcrumbs={[{ title: 'Animations', href: show('animations') }]}
+        >
+            <Wrapper className={`min-h-screen`}>
+                <h1 className="mb-2 text-3xl font-semibold">Animations</h1>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
                     <Link prefetch href={show('text-animator')}>
-                        Text Animator
+                        <Card
+                            className={`grid aspect-video place-content-center font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
+                        >
+                            <TextAnimator
+                                yoyo={true}
+                                repeat={-1}
+                                animation={`jelly`}
+                            >
+                                Text Animator
+                            </TextAnimator>
+                        </Card>
                     </Link>
-                </li>
-                <li>
                     <Link prefetch href={show('animate-css')}>
-                        Animate CSS
+                        <Card
+                            className={`grid aspect-video place-content-center font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
+                        >
+                            <div className={`animate-bounce repeat-infinite`}>
+                                Animate CSS
+                            </div>
+                        </Card>
                     </Link>
-                </li>
-                <li>
                     <Link prefetch href={show('canvas')}>
-                        Canvas
+                        <Card
+                            className={`relative isolate grid aspect-video place-content-center overflow-clip font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
+                        >
+                            Canvas
+                            <WavesThree
+                                cameraPosition={{ x: 0, y: -20, z: 5 }}
+                                style="wireframe"
+                                colors={['#a1a1a1', '#646464']}
+                                className={`mask-linear -inset-10 -z-20 rounded-[inherit] mask-linear-from-10% mask-linear-to-50% opacity-20`}
+                            />
+                        </Card>
                     </Link>
-                </li>
-            </ul>
-        </Wrapper>
+                </div>
+            </Wrapper>
+        </MainLayout>
     );
 }
 
-
 AnimationIndex.displayName = 'AnimationIndex';
-
-AnimationIndex.layout = MainLayout;

@@ -1,10 +1,8 @@
 import { Link } from '@inertiajs/react';
+import { Crown } from 'lucide-react';
 import ThemeToggle from '@/components/theme-toggle';
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuList,
-} from '@/components/ui/navigation-menu';
+import { Button } from '@/components/ui/button';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
 import Wrapper from '@/components/wrapper';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
@@ -12,7 +10,6 @@ import type { UseHeadroomOptions } from '@/registry/new-york/hooks/use-headroom'
 import useHeadroom from '@/registry/new-york/hooks/use-headroom';
 import { home } from '@/routes';
 import { index as animationIndex } from '@/routes/animations';
-
 
 const links = [
     {
@@ -90,22 +87,10 @@ const MainNavigation = ({ className }: { className?: string }) => {
                                 <ThemeToggle className="grid size-5 place-content-center text-muted-foreground hover:text-foreground" />
                             </NavigationMenuItem>
                             <NavigationMenuItem asChild>
-                                <Link
-                                    className="text-muted-foreground hover:text-foreground"
-                                    prefetch
-                                    href={`#`}
-                                >
-                                    Sign In
-                                </Link>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem asChild>
-                                <Link
-                                    className="text-muted-foreground hover:text-foreground"
-                                    prefetch
-                                    href={`#`}
-                                >
-                                    Register
-                                </Link>
+                                <Button>
+                                    <Crown className="size-4" />
+                                    <span>Premium</span>
+                                </Button>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>

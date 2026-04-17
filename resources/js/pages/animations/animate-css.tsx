@@ -6,26 +6,21 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CodeBlock } from '@/components/ui/code-block';
-import {
-    Combobox,
-    ComboboxContent,
-    ComboboxInput,
-    ComboboxItem,
-    ComboboxList,
-} from '@/components/ui/combobox';
+import { Combobox, ComboboxContent, ComboboxInput, ComboboxItem, ComboboxList } from '@/components/ui/combobox';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
+    DialogTrigger
 } from '@/components/ui/dialog';
 import { PackageManagerSelect } from '@/components/ui/package-manager-select';
+import Wrapper from '@/components/wrapper';
 import { useCopyToClipboard } from '@/hooks/use-prism';
 
 import MainLayout from '@/layouts/main-layout';
-import Wrapper from '@/components/wrapper';
+import { index as animationsIndex } from '@/routes/animations';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -405,136 +400,167 @@ export default function AnimateCss() {
     );
 
     return (
-        <Wrapper className="min-h-screen">
-            <div className="mb-12">
-                <h1 className="mb-4 text-3xl font-bold text-balance">
-                    Animate.css Animations
-                </h1>
-                <p className="mb-6 max-w-4xl text-xl text-balance text-muted-foreground">
-                    Click any animation card to view and copy the code. 100+
-                    CSS-based animations available.
-                </p>
+        <MainLayout
+            breadcrumbs={[
+                { title: 'Animations', href: animationsIndex() },
+                { title: 'Animate css', href: '#' },
+            ]}
+        >
+            <Wrapper className="min-h-screen">
+                <div className="mb-12">
+                    <div className="grid gap-4 lg:grid-cols-3">
+                        <div className={`col-span-full lg:col-span-2`}>
+                            <h1 className="mb-4 text-3xl font-bold text-balance">
+                                Animate.css Animations
+                            </h1>
+                            <p className="mb-6 max-w-4xl text-xl text-balance text-muted-foreground">
+                                Click any animation card to view and copy the
+                                code. 100+ CSS-based animations available.
+                            </p>
 
-                <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
-                    About
-                </h2>
-                <p className="mb-4 max-w-4xl text-balance text-muted-foreground">
-                    <span className="inline-block animate-bounce font-bold text-primary repeat-infinite">
-                        Animate.css
-                    </span>{' '}
-                    is a library of CSS animations that you can use directly in
-                    your components. Simply add the animation class name to any
-                    element to animate it.
-                </p>
-                <ul className="mb-6 list-disc pl-6 text-muted-foreground">
-                    <li>100+ built-in animation types</li>
-                    <li>Simple CSS class-based animations</li>
-                    <li>Works with any HTML element</li>
-                    <li>Fully customizable duration and timing</li>
-                    <li>Repeat and loop support</li>
-                    <li>Works with Tailwind CSS</li>
-                </ul>
+                            <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
+                                About
+                            </h2>
+                            <p className="mb-4 max-w-4xl text-balance text-muted-foreground">
+                                <span className="inline-block animate-bounce font-bold text-primary repeat-infinite">
+                                    Animate.css
+                                </span>{' '}
+                                is a library of CSS animations that you can use
+                                directly in your components. Simply add the
+                                animation class name to any element to animate
+                                it.
+                            </p>
+                        </div>
+                        <div
+                            className={`relative isolate col-span-full lg:col-span-1`}
+                        >
+                            <Card className="relative z-10 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/30">
+                                <CardContent>
+                                    <ul className="list-disc text-muted-foreground">
+                                        <li>100+ built-in animation types</li>
+                                        <li>
+                                            Simple CSS class-based animations
+                                        </li>
+                                        <li>Works with any HTML element</li>
+                                        <li>
+                                            Fully customizable duration and
+                                            timing
+                                        </li>
+                                        <li>Repeat and loop support</li>
+                                        <li>Works with Tailwind CSS</li>
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                            <Card className="absolute inset-x-0 -translate-y-5 scale-80 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/15" />
+                            <Card className="absolute inset-x-0 -translate-y-9 scale-90 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/20" />
+                        </div>
+                    </div>
 
-                <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
-                    Installation
-                </h2>
-                <div className="my-4">
-                    <Combobox
-                        value={selectedAnimation}
-                        onValueChange={(value) =>
-                            value && setSelectedAnimation(value)
-                        }
-                    >
-                        <ComboboxInput
-                            placeholder={
-                                animations.find(
-                                    (a) => a.name === selectedAnimation,
-                                )?.text || 'Search animations...'
+                    <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
+                        Installation
+                    </h2>
+                    <div className="my-4">
+                        <Combobox
+                            value={selectedAnimation}
+                            onValueChange={(value) =>
+                                value && setSelectedAnimation(value)
                             }
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            showTrigger={true}
-                            showClear={true}
-                        />
-                        <ComboboxContent>
-                            <ComboboxList>
-                                {filteredAnimations.map((anim) => (
-                                    <ComboboxItem
-                                        key={anim.name}
-                                        value={anim.name}
-                                    >
-                                        {anim.text}
-                                    </ComboboxItem>
-                                ))}
-                            </ComboboxList>
-                        </ComboboxContent>
-                    </Combobox>
-                </div>
-                <PackageManagerSelect
-                    className="my-4"
-                    codes={{
-                        npm: `npm shadcn@latest add @designbycode/${selectedAnimation}`,
-                        yarn: `yarn shadcn@latest add @designbycode/${selectedAnimation}`,
-                        pnpm: `pnpm shadcn@latest add @designbycode/${selectedAnimation}`,
-                        bun: `bunx --bun shadcn@latest add @designbycode/${selectedAnimation}`,
-                    }}
-                />
+                        >
+                            <ComboboxInput
+                                placeholder={
+                                    animations.find(
+                                        (a) => a.name === selectedAnimation,
+                                    )?.text || 'Search animations...'
+                                }
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                showTrigger={true}
+                                showClear={true}
+                            />
+                            <ComboboxContent>
+                                <ComboboxList>
+                                    {filteredAnimations.map((anim) => (
+                                        <ComboboxItem
+                                            key={anim.name}
+                                            value={anim.name}
+                                        >
+                                            {anim.text}
+                                        </ComboboxItem>
+                                    ))}
+                                </ComboboxList>
+                            </ComboboxContent>
+                        </Combobox>
+                    </div>
+                    <PackageManagerSelect
+                        className="my-4"
+                        codes={{
+                            npm: `npm shadcn@latest add @designbycode/${selectedAnimation}`,
+                            yarn: `yarn shadcn@latest add @designbycode/${selectedAnimation}`,
+                            pnpm: `pnpm shadcn@latest add @designbycode/${selectedAnimation}`,
+                            bun: `bunx --bun shadcn@latest add @designbycode/${selectedAnimation}`,
+                        }}
+                    />
 
-                <h2 className="mt-8 mb-4 text-2xl font-semibold text-foreground">
-                    Usage
-                </h2>
-                <div className="space-y-4">
-                    <div>
-                        <h3 className="mb-2 text-lg font-medium text-foreground">
-                            Basic Usage
-                        </h3>
-                        <CodeBlock
-                            variant="minimal"
-                            language="html"
-                            code={`<div class="${selectedAnimation} repeat-infinite">
+                    <h2 className="mt-8 mb-4 text-2xl font-semibold text-foreground">
+                        Usage
+                    </h2>
+                    <div className="space-y-4">
+                        <div>
+                            <h3 className="mb-2 text-lg font-medium text-foreground">
+                                Basic Usage
+                            </h3>
+                            <CodeBlock
+                                variant="minimal"
+                                language="html"
+                                code={`<div class="${selectedAnimation} repeat-infinite">
     Bouncing Content
 </div>`}
-                        />
+                            />
+                        </div>
                     </div>
+
+                    <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
+                        Installation all animations
+                    </h2>
+
+                    <PackageManagerSelect
+                        className="my-4"
+                        codes={{
+                            npm: `npm shadcn@latest add @designbycode/animate-all`,
+                            yarn: `yarn shadcn@latest add @designbycode/animate-all`,
+                            pnpm: `pnpm shadcn@latest add @designbycode/animate-all`,
+                            bun: `bunx --bun shadcn@latest add @designbycode/animate-all`,
+                        }}
+                    />
+
+                    <h2 className="mt-8 mb-4 text-2xl font-semibold text-foreground">
+                        Code Examples
+                    </h2>
+                    <p className="text-balance text-muted-foreground">
+                        Click on any animation card below to view and copy the
+                        code.
+                    </p>
                 </div>
 
-                <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
-                    Installation all animations
-                </h2>
-
-                <PackageManagerSelect
-                    className="my-4"
-                    codes={{
-                        npm: `npm shadcn@latest add @designbycode/animate-all`,
-                        yarn: `yarn shadcn@latest add @designbycode/animate-all`,
-                        pnpm: `pnpm shadcn@latest add @designbycode/animate-all`,
-                        bun: `bunx --bun shadcn@latest add @designbycode/animate-all`,
-                    }}
-                />
-
-                <h2 className="mt-8 mb-4 text-2xl font-semibold text-foreground">
-                    Code Examples
-                </h2>
-                <p className="text-balance text-muted-foreground">
-                    Click on any animation card below to view and copy the code.
-                </p>
-            </div>
-
-            {categories.map((category) => (
-                <section key={category} className="mb-12">
-                    <h2 className="mb-6 text-2xl font-semibold text-foreground">
-                        {category}
-                    </h2>
-                    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-                        {animations
-                            .filter((a) => a.category === category)
-                            .map((anim) => (
-                                <AnimationCard key={anim.name} anim={anim} />
-                            ))}
-                    </div>
-                </section>
-            ))}
-        </Wrapper>
+                {categories.map((category) => (
+                    <section key={category} className="mb-12">
+                        <h2 className="mb-6 text-2xl font-semibold text-foreground">
+                            {category}
+                        </h2>
+                        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+                            {animations
+                                .filter((a) => a.category === category)
+                                .map((anim) => (
+                                    <AnimationCard
+                                        key={anim.name}
+                                        anim={anim}
+                                    />
+                                ))}
+                        </div>
+                    </section>
+                ))}
+            </Wrapper>
+        </MainLayout>
     );
 }
 
@@ -630,5 +656,3 @@ function AnimationCard({ anim }: { anim: AnimationItem }) {
 }
 
 AnimateCss.displayName = 'AnimateCss';
-
-AnimateCss.layout = MainLayout;
