@@ -55,10 +55,15 @@ const MainNavigation = ({ className }: { className?: string }) => {
             <Wrapper className="flex items-center justify-between">
                 <Link
                     prefetch
-                    className={`text-xl font-bold tracking-tight focus:outline-offset-4`}
+                    className={`flex items-center space-x-1 text-xl font-bold tracking-tight focus:outline-offset-4`}
                     href={home()}
                 >
-                    designbycode
+                    <span
+                        className={`text-md grid size-7 place-content-center rounded-sm bg-foreground font-semibold text-background`}
+                    >
+                        ui
+                    </span>
+                    <span className="text-md">designbycode</span>
                 </Link>
 
                 <div className="flex items-center space-x-2">
