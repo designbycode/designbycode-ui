@@ -2861,7 +2861,7 @@
         },
         {
             "name": "use-headroom",
-            "path": "resources/registry/new-york/hooks/use-headroom.ts",
+            "path": "resources/js/registry/new-york/hooks/use-headroom.ts",
             "type": "registry:hook",
             "meta": {
                 "category": "hooks",
@@ -2875,7 +2875,28 @@
             "component": "useHeadroom",
             "files": [
                 {
-                    "path": "resources/registry/new-york/hooks/use-headroom.ts",
+                    "path": "resources/js/registry/new-york/hooks/use-headroom.ts",
+                    "type": "registry:hook"
+                }
+            ]
+        },
+        {
+            "name": "use-hover",
+            "path": "resources/js/registry/new-york/hooks/use-hover.ts",
+            "type": "registry:hook",
+            "meta": {
+                "category": "hooks",
+                "version": "1.0.0"
+            },
+            "title": "Use Hover",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": ["react"],
+            "devDependencies": [],
+            "component": "useHover",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/hooks/use-hover.ts",
                     "type": "registry:hook"
                 }
             ]
