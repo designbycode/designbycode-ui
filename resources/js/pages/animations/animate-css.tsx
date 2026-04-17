@@ -411,20 +411,32 @@ export default function AnimateCss() {
                     <div className="grid gap-4 lg:grid-cols-3">
                         <div className={`col-span-full lg:col-span-2`}>
                             <h1 className="mb-4 text-3xl font-bold text-balance">
-                                Animate.css Animations
+                                <span>Animate</span>
+                                <span className="font-semibold text-brand">
+                                    CSS
+                                </span>
                             </h1>
                             <p className="mb-6 max-w-4xl text-xl text-balance text-muted-foreground">
                                 Click any animation card to view and copy the
-                                code. 100+ CSS-based animations available.
+                                code.{' '}
+                                <span
+                                    className={`inline-block animate-wiggle font-semibold text-brand`}
+                                >
+                                    100+
+                                </span>{' '}
+                                CSS-based animations available.
                             </p>
 
                             <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
                                 About
                             </h2>
                             <p className="mb-4 max-w-4xl text-balance text-muted-foreground">
-                                <span className="inline-block animate-bounce font-bold text-primary repeat-infinite">
-                                    Animate.css
-                                </span>{' '}
+                                <span className="mr-1 inline-block animate-sway font-bold text-primary repeat-infinite">
+                                    Animate
+                                    <span className="font-semibold text-brand">
+                                        CSS
+                                    </span>
+                                </span>
                                 is a library of CSS animations that you can use
                                 directly in your components. Simply add the
                                 animation class name to any element to animate

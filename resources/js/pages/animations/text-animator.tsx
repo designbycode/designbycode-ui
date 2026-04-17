@@ -182,7 +182,18 @@ export default function AnimationAnimator() {
                             <p className="mb-6 max-w-4xl text-xl text-balance text-muted-foreground">
                                 Scroll to see animations trigger as they come
                                 into view. Click any animation card to view and
-                                copy the code. 102+ animations available.
+                                copy the code.{' '}
+                                <TextAnimator
+                                    animation="pulse"
+                                    trigger="scrollTrigger"
+                                    duration={0.8}
+                                    repeat={-1}
+                                    yoyo
+                                    className="text-brand"
+                                >
+                                    102+
+                                </TextAnimator>{' '}
+                                animations available.
                             </p>
                             <h2 className="mt-8 mb-2 text-2xl font-semibold text-foreground">
                                 About
@@ -195,7 +206,7 @@ export default function AnimationAnimator() {
                                     duration={0.8}
                                     repeat={-1}
                                     yoyo
-                                    className="font-bold text-primary"
+                                    className="font-bold text-brand"
                                 />{' '}
                                 is a powerful React component that creates
                                 stunning character-level text animations using
@@ -309,7 +320,7 @@ function AnimationCard({
     const codeExample = `
 <TextAnimator
     animation="${anim.name}"
-    trigger="scollTrigger">
+    trigger={'scrollTrigger'}>
     ${anim.text}
 </TextAnimator>
 `.trim();
