@@ -181,8 +181,8 @@
       "_routes-BgzmUYGe.js"
     ]
   },
-  "_package-manager-select-B3tL5DMz.js": {
-    "file": "assets/package-manager-select-B3tL5DMz.js",
+  "_package-manager-select-CKPxaZZE.js": {
+    "file": "assets/package-manager-select-CKPxaZZE.js",
     "name": "package-manager-select",
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
@@ -330,7 +330,7 @@
     "src": "node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-ext-400-normal.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-D7U5IpH3.css",
+    "file": "assets/app-DAt6QnDt.css",
     "name": "app",
     "names": [
       "app.css"
@@ -345,7 +345,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-LGGhyZRI.js",
+    "file": "assets/app-CEM-ReKr.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -391,7 +391,7 @@
     ]
   },
   "resources/js/pages/animations/animate-css.tsx": {
-    "file": "assets/animate-css-BdzOVBww.js",
+    "file": "assets/animate-css-tOPBjno6.js",
     "name": "animate-css",
     "src": "resources/js/pages/animations/animate-css.tsx",
     "isDynamicEntry": true,
@@ -403,7 +403,7 @@
       "_dist-tLqGZ9jX.js",
       "_main-layout-Ggowr6Jo.js",
       "_createLucideIcon-D0nWB72R.js",
-      "_package-manager-select-B3tL5DMz.js",
+      "_package-manager-select-CKPxaZZE.js",
       "_check-Ci54-djD.js",
       "_dist-BPwEMwc0.js",
       "_card-DgCbe1n7.js",
@@ -436,7 +436,7 @@
     ]
   },
   "resources/js/pages/animations/text-animator.tsx": {
-    "file": "assets/text-animator-BuDHM3mT.js",
+    "file": "assets/text-animator-D5mgpc25.js",
     "name": "text-animator",
     "src": "resources/js/pages/animations/text-animator.tsx",
     "isDynamicEntry": true,
@@ -445,7 +445,7 @@
       "_pixel-canvas-NxCRti3a.js",
       "_button-vajhg3Ld.js",
       "_main-layout-Ggowr6Jo.js",
-      "_package-manager-select-B3tL5DMz.js",
+      "_package-manager-select-CKPxaZZE.js",
       "_dist-BPwEMwc0.js",
       "_card-DgCbe1n7.js",
       "_dialog-0TR9qnYD.js",
