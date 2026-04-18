@@ -247,6 +247,9 @@
     --animate-sway: sway 2s ease-in-out infinite;
     --animate-ken-burns: kenBurns 8s ease-in-out infinite alternate;
     --animate-tilt: tilt 1.5s ease-in-out infinite alternate;
+    --animate-ring: ring 0.5s ease-in-out;
+    --animate-alarm: alarm 0.8s ease-in-out;
+    --animate-bell: bell 1s ease-in-out;
 }
 
 @layer utilities {
@@ -1570,6 +1573,66 @@
         }
         100% {
             transform: perspective(400px) rotateY(15deg);
+        }
+    }
+
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(0deg);
+        }
+  10%, 30% {
+    transform: rotate(15deg);
+        }
+  20%, 40% {
+    transform: rotate(-15deg);
+        }
+  50%, 70% {
+    transform: rotate(10deg);
+        }
+  60%, 80% {
+    transform: rotate(-10deg);
+        }
+    }
+
+@keyframes alarm {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+        }
+  10%, 30% {
+    transform: rotate(-25deg) scale(1.05);
+        }
+  20%, 40% {
+    transform: rotate(25deg) scale(1.05);
+        }
+  50%, 70% {
+    transform: rotate(-15deg) scale(1.02);
+        }
+  60%, 80% {
+    transform: rotate(15deg) scale(1.02);
+        }
+    }
+
+@keyframes bell {
+  0% {
+    transform: rotate(0);
+        }
+  10% {
+    transform: rotate(15deg);
+        }
+  20% {
+    transform: rotate(-15deg);
+        }
+  30% {
+    transform: rotate(10deg);
+        }
+  40% {
+    transform: rotate(-10deg);
+        }
+  50% {
+    transform: rotate(0);
+        }
+  100% {
+    transform: rotate(0);
         }
     }
 }

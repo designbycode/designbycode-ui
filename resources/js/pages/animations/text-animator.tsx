@@ -21,6 +21,8 @@ import type {
     TextAnimatorRef,
 } from '@/registry/new-york/components/ui/animations/text-animator';
 import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
+import { PixelCanvas } from '@/registry/new-york/components/ui/canvas/pixel-canvas';
+import { GlowRadial } from '@/registry/new-york/components/ui/glow/glow-radial';
 import { useHover } from '@/registry/new-york/hooks/use-hover';
 import { index as animationsIndex } from '@/routes/animations';
 
@@ -219,6 +221,15 @@ export default function AnimationAnimator() {
                             className={`relative isolate col-span-full lg:col-span-1`}
                         >
                             <Card className="relative z-10 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/30">
+                                <GlowRadial className={`absolute inset-0`} />
+                                <PixelCanvas
+                                    variant="vibrant"
+                                    shape="circle"
+                                    colors={['#818181', '#505050', '#3b3b3b']}
+                                    animationType="random"
+                                    className={`absolute inset-0 rounded-lg mask-radial-from-20% mask-radial-to-90% mask-radial-at-center mask-exclude opacity-50`}
+                                />
+
                                 <CardContent>
                                     <ul className="list-disc text-muted-foreground">
                                         <li>102+ built-in animation types</li>

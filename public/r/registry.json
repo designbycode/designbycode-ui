@@ -3022,6 +3022,100 @@
                     "type": "registry:hook"
                 }
             ]
+        },
+        {
+            "name": "animate-ring",
+            "type": "registry:style",
+            "meta": {
+                "category": "animations",
+                "version": "1.0.0"
+            },
+            "cssVars": {
+                "theme": {
+                    "--animate-ring": "ring 0.5s ease-in-out"
+                }
+            },
+            "css": {
+                "@layer utilities": {
+                    "@keyframes ring": {
+                        "0%, 100%": {
+                            "transform": "rotate(0deg)"
+                        },
+                        "10%, 30%": {
+                            "transform": "rotate(15deg)"
+                        },
+                        "20%, 40%": {
+                            "transform": "rotate(-15deg)"
+                        },
+                        "50%, 70%": {
+                            "transform": "rotate(10deg)"
+                        },
+                        "60%, 80%": {
+                            "transform": "rotate(-10deg)"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "animate-alarm",
+            "type": "registry:style",
+            "meta": {
+                "category": "animations",
+                "version": "1.0.0"
+            },
+            "cssVars": {
+                "theme": {
+                    "--animate-alarm": "alarm 0.8s ease-in-out"
+                }
+            },
+            "css": {
+                "@layer utilities": {
+                    "@keyframes alarm": {
+                        "0%, 100%": {
+                            "transform": "rotate(0deg) scale(1)"
+                        },
+                        "10%, 30%": {
+                            "transform": "rotate(-25deg) scale(1.05)"
+                        },
+                        "20%, 40%": {
+                            "transform": "rotate(25deg) scale(1.05)"
+                        },
+                        "50%, 70%": {
+                            "transform": "rotate(-15deg) scale(1.02)"
+                        },
+                        "60%, 80%": {
+                            "transform": "rotate(15deg) scale(1.02)"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "animate-bell",
+            "type": "registry:style",
+            "meta": {
+                "category": "animations",
+                "version": "1.0.0"
+            },
+            "cssVars": {
+                "theme": {
+                    "--animate-bell": "bell 1s ease-in-out"
+                }
+            },
+            "css": {
+                "@layer utilities": {
+                    "@keyframes bell": {
+                        "0%": { "transform": "rotate(0)" },
+                        "10%": { "transform": "rotate(15deg)" },
+                        "20%": { "transform": "rotate(-15deg)" },
+                        "30%": { "transform": "rotate(10deg)" },
+                        "40%": { "transform": "rotate(-10deg)" },
+                        "50%": { "transform": "rotate(0)" },
+                        "100%": { "transform": "rotate(0)" }
+                    }
+                }
+            }
         }
     ]
 }

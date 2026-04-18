@@ -6,20 +6,28 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CodeBlock } from '@/components/ui/code-block';
-import { Combobox, ComboboxContent, ComboboxInput, ComboboxItem, ComboboxList } from '@/components/ui/combobox';
+import {
+    Combobox,
+    ComboboxContent,
+    ComboboxInput,
+    ComboboxItem,
+    ComboboxList,
+} from '@/components/ui/combobox';
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger
+    DialogTrigger,
 } from '@/components/ui/dialog';
 import { PackageManagerSelect } from '@/components/ui/package-manager-select';
 import Wrapper from '@/components/wrapper';
 import { useCopyToClipboard } from '@/hooks/use-prism';
 
 import MainLayout from '@/layouts/main-layout';
+import { PixelCanvas } from '@/registry/new-york/components/ui/canvas/pixel-canvas';
+import { GlowRadial } from '@/registry/new-york/components/ui/glow/glow-radial';
 import { index as animationsIndex } from '@/routes/animations';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -59,6 +67,9 @@ const animations: AnimationItem[] = [
     { name: 'animate-wiggle', text: 'Wiggle', category: 'Attention Seekers' },
     { name: 'animate-ping', text: 'Ping', category: 'Attention Seekers' },
     { name: 'animate-glitch', text: 'Glitch', category: 'Attention Seekers' },
+    { name: 'animate-ring', text: 'Ring', category: 'Attention Seekers' },
+    { name: 'animate-alarm', text: 'Alarm', category: 'Attention Seekers' },
+    { name: 'animate-bell', text: 'Bell', category: 'Attention Seekers' },
 
     // Bouncing In
     { name: 'animate-bounce-in', text: 'Bounce In', category: 'Bouncing In' },
@@ -422,7 +433,7 @@ export default function AnimateCss() {
                                 <span
                                     className={`inline-block animate-wiggle font-semibold text-brand`}
                                 >
-                                    100+
+                                    {animations.length}+
                                 </span>{' '}
                                 CSS-based animations available.
                             </p>
@@ -447,9 +458,20 @@ export default function AnimateCss() {
                             className={`relative isolate col-span-full lg:col-span-1`}
                         >
                             <Card className="relative z-10 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/30">
+                                <GlowRadial className={`absolute inset-0`} />
+                                <PixelCanvas
+                                    variant="vibrant"
+                                    shape="circle"
+                                    colors={['#818181', '#505050', '#3b3b3b']}
+                                    animationType="random"
+                                    className={`absolute inset-0 rounded-lg mask-radial-from-20% mask-radial-to-90% mask-radial-at-center mask-exclude opacity-50`}
+                                />
                                 <CardContent>
-                                    <ul className="list-disc text-muted-foreground">
-                                        <li>100+ built-in animation types</li>
+                                    <ul className="list-disc text-muted-foreground text-shadow-2xs text-shadow-muted/25 dark:text-shadow-black">
+                                        <li>
+                                            {animations.length}+ built-in
+                                            animation types
+                                        </li>
                                         <li>
                                             Simple CSS class-based animations
                                         </li>
@@ -463,8 +485,8 @@ export default function AnimateCss() {
                                     </ul>
                                 </CardContent>
                             </Card>
-                            <Card className="absolute inset-x-0 -translate-y-5 scale-80 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/15" />
-                            <Card className="absolute inset-x-0 -translate-y-9 scale-90 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/20" />
+                            <Card className="absolute inset-x-0 -translate-y-5 scale-80 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/15"></Card>
+                            <Card className="absolute inset-x-0 -translate-y-9 scale-90 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/20"></Card>
                         </div>
                     </div>
 

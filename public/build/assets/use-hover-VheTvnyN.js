@@ -1,1 +1,0 @@
-import{b as e,i as t,p as n}from"./wayfinder-CYTaU8YQ.js";var r=t(),i=e(n(),1);function a(){let e=(0,r.c)(3),[t,n]=(0,i.useState)(!1),a;e[0]===Symbol.for(`react.memo_cache_sentinel`)?(a=e=>{e&&(e.onmouseenter=()=>n(!0),e.onmouseleave=()=>n(!1))},e[0]=a):a=e[0];let o=a,s;return e[1]===t?s=e[2]:(s={isHovered:t,hoverRef:o},e[1]=t,e[2]=s),s}export{a as t};
