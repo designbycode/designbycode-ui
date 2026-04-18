@@ -46,7 +46,7 @@ export function PackageManagerSelect({
     return (
         <div
             className={cn(
-                "group/package-manager relative rounded-lg border bg-muted/40",
+                "group/package-manager relative rounded-lg min-w-0 border ",
                 className
             )}
         >
@@ -80,14 +80,14 @@ export function PackageManagerSelect({
                     <span className="sr-only">Copy</span>
                 </Button>
             </div>
-            <div className="overflow-x-auto p-3">
-                <pre className="m-0! rounded-none! bg-transparent! font-mono! text-sm leading-relaxed">
-                    <code
-                        className={`language-${normalizedLanguage}`}
-                        dangerouslySetInnerHTML={{ __html: highlightedCode }}
-                    />
-                </pre>
-            </div>
+            <div className="overflow-x-auto p-3 max-w-full min-w-0">
+<pre className="w-full min-w-0 m-0! rounded-none! bg-transparent! font-mono! text-sm leading-relaxed">
+<code
+    className={`language-${normalizedLanguage} pr-6`}
+    dangerouslySetInnerHTML={{ __html: highlightedCode }}
+/>
+</pre>  </div>
+
 
         </div>
     );

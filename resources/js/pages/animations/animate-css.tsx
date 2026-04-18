@@ -528,10 +528,10 @@ export default function AnimateCss() {
                     <PackageManagerSelect
                         className="my-4"
                         codes={{
-                            npm: `npm shadcn@latest add @designbycode/${selectedAnimation}`,
-                            yarn: `yarn shadcn@latest add @designbycode/${selectedAnimation}`,
-                            pnpm: `pnpm shadcn@latest add @designbycode/${selectedAnimation}`,
-                            bun: `bunx --bun shadcn@latest add @designbycode/${selectedAnimation}`,
+                            npm: `npm shadcn@latest add https://ui.designbycode.co.za/r/${selectedAnimation}`,
+                            yarn: `yarn shadcn@latest add https://ui.designbycode.co.za/r/${selectedAnimation}`,
+                            pnpm: `pnpm shadcn@latest add https://ui.designbycode.co.za/r/${selectedAnimation}`,
+                            bun: `bunx --bun shadcn@latest add https://ui.designbycode.co.za/r/${selectedAnimation}`,
                         }}
                     />
 
@@ -560,10 +560,10 @@ export default function AnimateCss() {
                     <PackageManagerSelect
                         className="my-4"
                         codes={{
-                            npm: `npm shadcn@latest add @designbycode/animate-all`,
-                            yarn: `yarn shadcn@latest add @designbycode/animate-all`,
-                            pnpm: `pnpm shadcn@latest add @designbycode/animate-all`,
-                            bun: `bunx --bun shadcn@latest add @designbycode/animate-all`,
+                            npm: `npm shadcn@latest add https://ui.designbycode.co.za/r/animate-all`,
+                            yarn: `yarn shadcn@latest add https://ui.designbycode.co.za/r/animate-all`,
+                            pnpm: `pnpm shadcn@latest add https://ui.designbycode.co.za/r/animate-all`,
+                            bun: `bunx --bun shadcn@latest add https://ui.designbycode.co.za/r/animate-all`,
                         }}
                     />
 
@@ -639,7 +639,7 @@ function AnimationCard({ anim }: { anim: AnimationItem }) {
                             <span>{anim.name.replace('animate-', '')}</span>
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className="grid aspect-video place-items-center overflow-hidden">
+                    <CardContent className="grid aspect-video max-w-lg min-w-0 place-items-center overflow-hidden">
                         <span
                             ref={textRef}
                             className="text-center font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40 transition-all delay-300 group-hover:repeat-infinite!"
@@ -665,14 +665,16 @@ function AnimationCard({ anim }: { anim: AnimationItem }) {
                         {anim.text}
                     </span>
                 </div>
+
                 <PackageManagerSelect
                     codes={{
-                        npm: `npx shadcn add @designbycode/${anim.name}`,
-                        yarn: `yarn shadcn add @designbycode/${anim.name}`,
-                        pnpm: `pnpm dlx shadcn add @designbycode/${anim.name}`,
-                        bun: `bunx --bun shadcn add @designbycode/${anim.name}`,
+                        npm: `npx shadcn add https://ui.designbycode.co.za/r/${anim.name}.json`,
+                        yarn: `yarn shadcn add https://ui.designbycode.co.za/r/${anim.name}.json`,
+                        pnpm: `pnpm dlx shadcn add https://ui.designbycode.co.za/r/${anim.name}.json`,
+                        bun: `bunx --bun shadcn add https://ui.designbycode.co.za/r/${anim.name}.json`,
                     }}
                 />
+
                 <CodeBlock
                     variant="minimal"
                     language="html"

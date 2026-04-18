@@ -10,16 +10,13 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
+    DialogTrigger
 } from '@/components/ui/dialog';
 import { PackageManagerSelect } from '@/components/ui/package-manager-select';
 import Wrapper from '@/components/wrapper';
 import { useCopyToClipboard } from '@/hooks/use-prism';
 import MainLayout from '@/layouts/main-layout';
-import type {
-    AnimationType,
-    TextAnimatorRef,
-} from '@/registry/new-york/components/ui/animations/text-animator';
+import type { AnimationType, TextAnimatorRef } from '@/registry/new-york/components/ui/animations/text-animator';
 import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
 import { PixelCanvas } from '@/registry/new-york/components/ui/canvas/pixel-canvas';
 import { GlowRadial } from '@/registry/new-york/components/ui/glow/glow-radial';
@@ -267,10 +264,10 @@ export default function AnimationAnimator() {
                     <PackageManagerSelect
                         className={`my-4`}
                         codes={{
-                            npm: 'npm shadcn@latest add @designbycode/text-animator',
-                            yarn: 'yarn shadcn@latest add @designbycode/text-animator',
-                            pnpm: 'pnpm shadcn@latest add @designbycode/text-animator',
-                            bun: 'bunx --bun shadcn@latest add @designbycode/text-animator',
+                            npm: 'npm shadcn@latest add https://ui.designbycode.co.za/r/text-animator.json',
+                            yarn: 'yarn shadcn@latest add https://ui.designbycode.co.za/r/text-animator.json',
+                            pnpm: 'pnpm shadcn@latest add https://ui.designbycode.co.za/r/text-animator.json',
+                            bun: 'bunx --bun shadcn@latest add https://ui.designbycode.co.za/r/text-animator.json',
                         }}
                     />
                     <p className="text-zinc-500">
