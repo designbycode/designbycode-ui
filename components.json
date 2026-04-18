@@ -2,7 +2,7 @@
     "$schema": "https://ui.shadcn.com/schema.json",
     "style": "new-york",
     "registries": {
-        "@designbycode": "http://ui.designbycode.co.za/r/registry.json"
+        "@designbycode": "https://ui.designbycode.co.za/r"
     },
     "rsc": false,
     "tsx": true,
