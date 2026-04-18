@@ -546,7 +546,7 @@ export default function AnimateCss() {
                             <CodeBlock
                                 variant="minimal"
                                 language="html"
-                                code={`<div class="${selectedAnimation} repeat-infinite">
+                                code={`<div className="${selectedAnimation} repeat-infinite">
     Bouncing Content
 </div>`}
                             />
@@ -600,7 +600,7 @@ export default function AnimateCss() {
 
 function AnimationCard({ anim }: { anim: AnimationItem }) {
     const codeExample = `
-<div class="${anim.name}">
+<div className="${anim.name}">
     ${anim.text}
 </div>
 `.trim();
