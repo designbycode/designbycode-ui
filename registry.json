@@ -1,7 +1,7 @@
 {
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "name": "designbycode",
-    "homepage": "https://designbycode.co.za",
+    "homepage": "https://ui.designbycode.co.za",
 
     "items": [
         {
@@ -2957,7 +2957,7 @@
             "component": "AnimatedTabs",
             "files": [
                 {
-                    "path": "resources/js/registry/new-york/components/ui/motion/animated-tabs.tsx",
+                    "path": "resources/js/registry/new-york/components/ui/tabs/animated-tabs.tsx",
                     "type": "registry:ui"
                 }
             ]
@@ -3116,6 +3116,104 @@
                     }
                 }
             }
+        },
+        {
+            "name": "glow-stack",
+            "path": "resources/js/registry/new-york/components/ui/glow/glow-stack.tsx",
+            "type": "registry:ui",
+            "meta": {
+                "category": "components",
+                "version": "1.0.0"
+            },
+            "title": "Glow Stack",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": ["react", "clsx", "tailwind-merge"],
+            "component": "GlowStack",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/components/ui/glow/glow-stack.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "glow-radial",
+            "path": "resources/js/registry/new-york/components/ui/glow/glow-radial.tsx",
+            "type": "registry:ui",
+            "meta": {
+                "category": "components",
+                "version": "1.0.0"
+            },
+            "title": "Glow Radial",
+            "author": "designbycode",
+            "registryDependencies": ["@designbycode/glow-stack"],
+            "dependencies": ["react", "clsx", "tailwind-merge"],
+            "component": "GlowRadial",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/components/ui/glow/glow-radial.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "glow-geometry",
+            "path": "resources/js/registry/new-york/lib/glow-geometry.ts",
+            "type": "registry:lib",
+            "meta": {
+                "category": "lib",
+                "version": "1.0.0"
+            },
+            "title": "Glow Geometry",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": [],
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/lib/glow-geometry.ts",
+                    "type": "registry:lib"
+                }
+            ]
+        },
+        {
+            "name": "pixel-canvas",
+            "path": "resources/js/registry/new-york/lib/pixel-canvas.ts",
+            "type": "registry:lib",
+            "meta": {
+                "category": "lib",
+                "version": "1.0.0"
+            },
+            "title": "Pixel Canvas",
+            "author": "designbycode",
+            "registryDependencies": [],
+            "dependencies": [],
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/lib/pixel-canvas.ts",
+                    "type": "registry:lib"
+                }
+            ]
+        },
+        {
+            "name": "use-pixel-canvas",
+            "path": "resources/js/registry/new-york/hooks/use-pixel-canvas.ts",
+            "type": "registry:hook",
+            "meta": {
+                "category": "hooks",
+                "version": "1.0.0"
+            },
+            "title": "Use Pixel Canvas",
+            "author": "designbycode",
+            "registryDependencies": ["@designbycode/pixel-canvas"],
+            "dependencies": ["react"],
+            "component": "usePixelCanvas",
+            "files": [
+                {
+                    "path": "resources/js/registry/new-york/hooks/use-pixel-canvas.ts",
+                    "type": "registry:hook"
+                }
+            ]
         }
     ]
 }

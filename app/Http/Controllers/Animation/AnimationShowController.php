@@ -19,6 +19,7 @@ class AnimationShowController extends Controller
             'text-animator' => Inertia::render('animations/text-animator'),
             'animate-css' => Inertia::render('animations/animate-css'),
             'canvas' => Inertia::render('animations/canvas'),
+            'three' => Inertia::render('animations/three'),
             default => abort(404),
         };
     }

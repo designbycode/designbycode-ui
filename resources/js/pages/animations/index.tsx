@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import Wrapper from '@/components/wrapper';
 import MainLayout from '@/layouts/main-layout';
 import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
+import { PixelCanvas } from '@/registry/new-york/components/ui/canvas/pixel-canvas';
 import WavesThree from '@/registry/new-york/components/ui/threejs/waves-three';
 import { show } from '@/routes/animations';
 
@@ -41,6 +42,18 @@ export default function AnimationIndex() {
                             className={`relative isolate grid aspect-video place-content-center overflow-clip font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
                         >
                             Canvas
+                            <PixelCanvas
+                                variant="subtle"
+                                active={true}
+                                className="absolute inset-0 rounded-[inherit] mask-linear-from-10% mask-linear-to-50% dark:opacity-20"
+                            />
+                        </Card>
+                    </Link>
+                    <Link prefetch href={show('three')}>
+                        <Card
+                            className={`relative isolate grid aspect-video place-content-center overflow-clip font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
+                        >
+                            Three
                             <WavesThree
                                 cameraPosition={{ x: 0, y: -20, z: 5 }}
                                 style="wireframe"

@@ -103,7 +103,7 @@ export function usePixelCanvas(
 
         const pixels: PixelState[] = [];
         const reducedMotion = window.matchMedia(
-            '(prefers-reduced-motion: reduce)',
+            '(prefers-reduced-tabs: reduce)',
         ).matches;
 
         for (let x = 0; x < width; x += config.gap) {

@@ -6,8 +6,8 @@ import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { usePackageManagerStore } from '@/store/use-package-manager';
-import { AnimatedTabs } from '@/registry/new-york/components/ui/motion/animated-tabs';
-import { usePrismHighlight, useCopyToClipboard } from '@/hooks/use-prism';
+import { AnimatedTabs } from '@/registry/new-york/components/ui/tabs/animated-tabs';
+import { useCopyToClipboard, usePrismHighlight } from '@/hooks/use-prism';
 
 export type PackageManager = "npm" | "pnpm" | "yarn" | "bun";
 
