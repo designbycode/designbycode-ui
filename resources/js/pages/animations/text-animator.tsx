@@ -10,13 +10,15 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger
+    DialogTrigger,
 } from '@/components/ui/dialog';
 import { PackageManagerSelect } from '@/components/ui/package-manager-select';
-import Wrapper from '@/components/wrapper';
 import { useCopyToClipboard } from '@/hooks/use-prism';
 import MainLayout from '@/layouts/main-layout';
-import type { AnimationType, TextAnimatorRef } from '@/registry/new-york/components/ui/animations/text-animator';
+import type {
+    AnimationType,
+    TextAnimatorRef,
+} from '@/registry/new-york/components/ui/animations/text-animator';
 import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
 import { PixelCanvas } from '@/registry/new-york/components/ui/canvas/pixel-canvas';
 import { GlowRadial } from '@/registry/new-york/components/ui/glow/glow-radial';
@@ -171,7 +173,7 @@ export default function AnimationAnimator() {
                 { title: 'Text Animator', href: '#' },
             ]}
         >
-            <Wrapper className="min-h-screen">
+            <div className="min-h-screen">
                 <div className="mb-12">
                     <div className="grid gap-4 lg:grid-cols-3">
                         <div className={`col-span-full lg:col-span-2`}>
@@ -311,7 +313,7 @@ export default function AnimationAnimator() {
                         </div>
                     </section>
                 ))}
-            </Wrapper>
+            </div>
         </MainLayout>
     );
 }

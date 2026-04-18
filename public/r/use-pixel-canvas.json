@@ -7,7 +7,7 @@
     "react"
   ],
   "registryDependencies": [
-    "@designbycode/pixel-canvas"
+    "https://ui.designbycode.co.za/r/pixel-canvas.json"
   ],
   "files": [
     {

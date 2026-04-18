@@ -6,7 +6,7 @@ import WavesThree from '@/registry/new-york/components/ui/threejs/waves-three';
 
 export default function MainHero() {
     return (
-        <div className={`relative rounded-2xl`}>
+        <div className={`relative mt-4 rounded-2xl`}>
             <GlowRadial className={`absolute inset-0`} />
             <GlowRadial
                 borderWidth={15}

@@ -1,26 +1,19 @@
-import Wrapper from '@/components/wrapper';
 import MainLayout from '@/layouts/main-layout';
+import { index as animationsIndex } from '@/routes/animations';
 
 export default function Three() {
     return (
-        <Wrapper>
-            <h1>ThreeJs</h1>]
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-                autem eius explicabo facere, placeat similique.
-            </p>
-            <p>
-                Dignissimos distinctio earum ipsa labore officiis porro ut!
-                Aperiam, consectetur cum et repudiandae similique sit!
-            </p>
-            <p>
-                Ad consequatur, doloribus ducimus enim facilis fuga id, nulla
-                optio sequi suscipit voluptas, voluptate voluptatem!
-            </p>
-        </Wrapper>
+        <MainLayout
+            breadcrumbs={[
+                { title: 'Animations', href: animationsIndex() },
+                { title: 'Threejs', href: '#' },
+            ]}
+        >
+            <div className="min-h-screen">
+                <h1>Threejs</h1>
+            </div>
+        </MainLayout>
     );
 }
 
-
 Three.displayName = 'Three';
-Three.layout = MainLayout;

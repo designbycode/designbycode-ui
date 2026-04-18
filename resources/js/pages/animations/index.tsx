@@ -1,6 +1,5 @@
 import { Link } from '@inertiajs/react';
 import { Card } from '@/components/ui/card';
-import Wrapper from '@/components/wrapper';
 import MainLayout from '@/layouts/main-layout';
 import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
 import { PixelCanvas } from '@/registry/new-york/components/ui/canvas/pixel-canvas';
@@ -12,10 +11,10 @@ export default function AnimationIndex() {
         <MainLayout
             breadcrumbs={[{ title: 'Animations', href: show('animations') }]}
         >
-            <Wrapper className={`min-h-screen`}>
+            <div className={`min-h-screen`}>
                 <h1 className="mb-2 text-3xl font-semibold">Animations</h1>
                 <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-                    <Link prefetch href={show('text-animator')}>
+                    <Link prefetch={`hover`} href={show('text-animator')}>
                         <Card
                             className={`grid aspect-video place-content-center font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
                         >
@@ -28,7 +27,7 @@ export default function AnimationIndex() {
                             </TextAnimator>
                         </Card>
                     </Link>
-                    <Link prefetch href={show('animate-css')}>
+                    <Link prefetch={`hover`} href={show('animate-css')}>
                         <Card
                             className={`grid aspect-video place-content-center font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
                         >
@@ -37,7 +36,7 @@ export default function AnimationIndex() {
                             </div>
                         </Card>
                     </Link>
-                    <Link prefetch href={show('canvas')}>
+                    <Link prefetch={`hover`} href={show('canvas')}>
                         <Card
                             className={`relative isolate grid aspect-video place-content-center overflow-clip font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
                         >
@@ -49,7 +48,7 @@ export default function AnimationIndex() {
                             />
                         </Card>
                     </Link>
-                    <Link prefetch href={show('three')}>
+                    <Link prefetch={`hover`} href={show('three')}>
                         <Card
                             className={`relative isolate grid aspect-video place-content-center overflow-clip font-bebas-neue text-sm text-[clamp(0.75rem,10vw+1rem,2rem)] font-medium text-foreground/40`}
                         >
@@ -63,7 +62,7 @@ export default function AnimationIndex() {
                         </Card>
                     </Link>
                 </div>
-            </Wrapper>
+            </div>
         </MainLayout>
     );
 }

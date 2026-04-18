@@ -18,22 +18,27 @@ import { index as animationIndex } from '@/routes/animations';
 
 const links = [
     {
+        title: 'Home',
+        href: home(),
+    },
+
+    {
         title: 'Animations',
         href: animationIndex(),
     },
 
-    {
-        title: 'Blocks',
-        href: '#',
-    },
-    {
-        title: 'Components',
-        href: '#',
-    },
-    {
-        title: 'Hooks',
-        href: '#',
-    },
+    // {
+    //     title: 'Blocks',
+    //     href: '#',
+    // },
+    // {
+    //     title: 'Components',
+    //     href: '#',
+    // },
+    // {
+    //     title: 'Hooks',
+    //     href: '#',
+    // },
 ];
 
 const MainNavigation = ({ className }: { className?: string }) => {
@@ -52,7 +57,7 @@ const MainNavigation = ({ className }: { className?: string }) => {
         <div
             ref={ref}
             className={cn(
-                `fixed inset-x-0 top-0 z-50 flex h-16 items-center border-b border-border bg-background/75 backdrop-blur-sm transition-all`,
+                `fixed inset-x-0 top-0 z-50 flex h-16 items-center border-b border-border bg-background/75 backdrop-blur-sm transition-transform duration-700`,
                 pinned ? 'translate-y-0' : '-translate-y-16',
                 className,
             )}

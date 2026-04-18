@@ -1,4 +1,3 @@
-import Wrapper from '@/components/wrapper';
 import MainLayout from '@/layouts/main-layout';
 import { index as animationsIndex } from '@/routes/animations';
 
@@ -10,9 +9,9 @@ export default function Canvas() {
                 { title: 'Canvas', href: '#' },
             ]}
         >
-            <Wrapper className="min-h-screen">
+            <div className="min-h-screen">
                 <h1>Canvas</h1>
-            </Wrapper>
+            </div>
         </MainLayout>
     );
 }

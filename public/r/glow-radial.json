@@ -9,7 +9,7 @@
     "tailwind-merge"
   ],
   "registryDependencies": [
-    "@designbycode/glow-stack"
+    "https://ui.designbycode.co.za/r/glow-stack.json"
   ],
   "files": [
     {
