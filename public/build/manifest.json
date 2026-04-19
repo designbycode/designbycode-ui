@@ -354,7 +354,7 @@
     "src": "node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-ext-400-normal.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CVmxY8Oq.css",
+    "file": "assets/app-BqoeW0Wc.css",
     "name": "app",
     "names": [
       "app.css"
@@ -369,7 +369,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-CuQLFfjq.js",
+    "file": "assets/app-g6quF_4L.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -521,7 +521,7 @@
     ]
   },
   "resources/js/pages/auth/login.tsx": {
-    "file": "assets/login-oGm5xSA1.js",
+    "file": "assets/login-DO7st-jl.js",
     "name": "login",
     "src": "resources/js/pages/auth/login.tsx",
     "isDynamicEntry": true,
@@ -546,7 +546,7 @@
     ]
   },
   "resources/js/pages/auth/register.tsx": {
-    "file": "assets/register-CMUmOUs_.js",
+    "file": "assets/register-CRJ5BrJY.js",
     "name": "register",
     "src": "resources/js/pages/auth/register.tsx",
     "isDynamicEntry": true,

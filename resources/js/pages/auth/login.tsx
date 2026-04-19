@@ -98,18 +98,18 @@ export default function Login({
                             <div className="grid gap-2">
                                 <Button asChild variant="outline" type="button">
                                     <Link
-                                        href={authRedirect({
+                                        href={authRedirect.url({
                                             provider: 'github',
                                         })}
-                                        prefetch={'hover'}
                                     >
                                         Login with Github
                                     </Link>
                                 </Button>
                                 <Button asChild variant="outline" type="button">
                                     <Link
-                                        href={authRedirect('google')}
-                                        prefetch={'hover'}
+                                        href={authRedirect.url({
+                                            provider: 'google',
+                                        })}
                                     >
                                         Login with Google
                                     </Link>

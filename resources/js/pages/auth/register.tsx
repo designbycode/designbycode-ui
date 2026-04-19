@@ -100,10 +100,9 @@ export default function Register() {
                         <Separator />
                         <Button asChild variant="outline" type="button">
                             <Link
-                                href={authRedirect('github')}
-                                prefetch={'hover'}
+                                href={authRedirect.url({ provider: 'github' })}
                             >
-                                Login with Github
+                                Register with Github
                             </Link>
                         </Button>
 
