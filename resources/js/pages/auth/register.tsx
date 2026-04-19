@@ -99,11 +99,9 @@ export default function Register() {
 
                         <Separator />
                         <Button asChild variant="outline" type="button">
-                            <Link
-                                href={authRedirect.url({ provider: 'github' })}
-                            >
+                            <a href={authRedirect.url({ provider: 'github' })}>
                                 Register with Github
-                            </Link>
+                            </a>
                         </Button>
 
                         <div className="text-center text-sm text-muted-foreground">

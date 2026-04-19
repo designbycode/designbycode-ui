@@ -1,4 +1,3 @@
-import { Link } from '@inertiajs/react';
 import { Crown } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import ThemeToggle from '@/components/theme-toggle';
@@ -94,7 +93,7 @@ const MainNavigation = ({ className }: { className?: string }) => {
                             <NavigationMenuItem>
                                 <ThemeToggle className="grid size-5 place-content-center text-muted-foreground hover:text-foreground" />
                             </NavigationMenuItem>
-                            <NavigationMenuItem asChild>
+                            <NavigationMenuItem>
                                 <Button asChild className={`relative`}>
                                     <a
                                         href={
