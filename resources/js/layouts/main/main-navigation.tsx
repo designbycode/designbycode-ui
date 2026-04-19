@@ -2,11 +2,7 @@ import { Crown } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import ThemeToggle from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuList,
-} from '@/components/ui/navigation-menu';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
 import Wrapper from '@/components/wrapper';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
@@ -16,6 +12,7 @@ import useHeadroom from '@/registry/new-york/hooks/use-headroom';
 import { home } from '@/routes';
 import { index as animationIndex } from '@/routes/animations';
 import { redirect as authRedirect } from '@/routes/auth';
+import { Link } from '@inertiajs/react';
 
 const links = [
     {

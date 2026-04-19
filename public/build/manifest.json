@@ -183,8 +183,8 @@
       "_createLucideIcon-Bl1YDOk8.js"
     ]
   },
-  "_main-layout-DWCl1kMq.js": {
-    "file": "assets/main-layout-DWCl1kMq.js",
+  "_main-layout-9nj19kCT.js": {
+    "file": "assets/main-layout-9nj19kCT.js",
     "name": "main-layout",
     "imports": [
       "_jsx-runtime-BYzj5QUW.js",
@@ -395,7 +395,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-C8BChrZA.js",
+    "file": "assets/app-08aQ4DkN.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -444,7 +444,7 @@
     ]
   },
   "resources/js/pages/animations/animate-css.tsx": {
-    "file": "assets/animate-css-D-AgECVG.js",
+    "file": "assets/animate-css-SU8rfQ-k.js",
     "name": "animate-css",
     "src": "resources/js/pages/animations/animate-css.tsx",
     "isDynamicEntry": true,
@@ -454,7 +454,7 @@
       "_ScrollTrigger-DfKmHXmV.js",
       "_button-CrKxt-fW.js",
       "_dist-DN3Vg52S.js",
-      "_main-layout-DWCl1kMq.js",
+      "_main-layout-9nj19kCT.js",
       "_createLucideIcon-Bl1YDOk8.js",
       "_package-manager-select-MeJ1tjK1.js",
       "_check-CQwu5N4r.js",
@@ -466,23 +466,23 @@
     ]
   },
   "resources/js/pages/animations/canvas.tsx": {
-    "file": "assets/canvas-BdOIuf2t.js",
+    "file": "assets/canvas-lLKiyePv.js",
     "name": "canvas",
     "src": "resources/js/pages/animations/canvas.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_jsx-runtime-BYzj5QUW.js",
-      "_main-layout-DWCl1kMq.js"
+      "_main-layout-9nj19kCT.js"
     ]
   },
   "resources/js/pages/animations/index.tsx": {
-    "file": "assets/animations-BvicPxKo.js",
+    "file": "assets/animations-CqtSIxDT.js",
     "name": "animations",
     "src": "resources/js/pages/animations/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_jsx-runtime-BYzj5QUW.js",
-      "_main-layout-DWCl1kMq.js",
+      "_main-layout-9nj19kCT.js",
       "_waves-three-IsEOuxDd.js",
       "_card-D4WHOyYx.js",
       "_text-animator-BUEJ1Jdk.js",
@@ -490,14 +490,14 @@
     ]
   },
   "resources/js/pages/animations/text-animator.tsx": {
-    "file": "assets/text-animator-B-AaFC0V.js",
+    "file": "assets/text-animator-Cz-Kb9sq.js",
     "name": "text-animator",
     "src": "resources/js/pages/animations/text-animator.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_jsx-runtime-BYzj5QUW.js",
       "_button-CrKxt-fW.js",
-      "_main-layout-DWCl1kMq.js",
+      "_main-layout-9nj19kCT.js",
       "_package-manager-select-MeJ1tjK1.js",
       "_dist-DcA-BJ9q.js",
       "_card-D4WHOyYx.js",
@@ -507,13 +507,13 @@
     ]
   },
   "resources/js/pages/animations/three.tsx": {
-    "file": "assets/three-ByfwGIeR.js",
+    "file": "assets/three-Cly9NlZZ.js",
     "name": "three",
     "src": "resources/js/pages/animations/three.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_jsx-runtime-BYzj5QUW.js",
-      "_main-layout-DWCl1kMq.js"
+      "_main-layout-9nj19kCT.js"
     ]
   },
   "resources/js/pages/auth/confirm-password.tsx": {
@@ -648,14 +648,14 @@
     ]
   },
   "resources/js/pages/home.tsx": {
-    "file": "assets/home-Dy4_Q1y2.js",
+    "file": "assets/home-Bc115wN_.js",
     "name": "home",
     "src": "resources/js/pages/home.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_jsx-runtime-BYzj5QUW.js",
       "_button-CrKxt-fW.js",
-      "_main-layout-DWCl1kMq.js",
+      "_main-layout-9nj19kCT.js",
       "_createLucideIcon-Bl1YDOk8.js",
       "_waves-three-IsEOuxDd.js",
       "_card-D4WHOyYx.js",
