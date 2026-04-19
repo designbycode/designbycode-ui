@@ -12,7 +12,6 @@ class RegistryController extends Controller
     public function __invoke(Request $request, string $name)
     {
 
-
         if ($name === 'registry') {
             return response()->file(base_path('registry.json'));
         }
