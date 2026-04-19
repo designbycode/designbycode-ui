@@ -5,6 +5,7 @@
     "": {
       "dependencies": {
         "@base-ui/react": "^1.4.0",
+        "@fontsource-variable/playfair-display": "^5.2.8",
         "@fontsource/bebas-neue": "^5.2.7",
         "@gsap/react": "^2.1.2",
         "@headlessui/react": "^2.2.10",
@@ -161,6 +162,8 @@
     "@floating-ui/react-dom": ["@floating-ui/react-dom@2.1.8", "", { "dependencies": { "@floating-ui/dom": "^1.7.6" }, "peerDependencies": { "react": ">=16.8.0", "react-dom": ">=16.8.0" } }, "sha512-cC52bHwM/n/CxS87FH0yWdngEZrjdtLW/qVruo68qg+prK7ZQ4YGdut2GyDVpoGeAYe/h899rVeOVm6Oi40k2A=="],
 
     "@floating-ui/utils": ["@floating-ui/utils@0.2.11", "", {}, "sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg=="],
+
+    "@fontsource-variable/playfair-display": ["@fontsource-variable/playfair-display@5.2.8", "", {}, "sha512-ZzVIXPOrL85yyOvZYoBzUszIJM+xKkHqni4IYn2CVLaGQQdJR8sBeC8yFNgjxSJ7ludTwta8qpULeOFuk5X75A=="],
 
     "@fontsource/bebas-neue": ["@fontsource/bebas-neue@5.2.7", "", {}, "sha512-DsmBrmq55d9BCU0mt4DT4RZDdH8vhWRKEUOfbuNB1EEjMuwbtFvM8N+3gIlkYSFbsb10P8Q19BV5OdpMu2h0fA=="],
 

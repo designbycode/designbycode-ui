@@ -2,7 +2,6 @@
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "name": "designbycode",
     "homepage": "https://ui.designbycode.co.za",
-
     "items": [
         {
             "name": "font-inter",
@@ -34,6 +33,22 @@
                 "variable": "--font-bebas-neue",
                 "subsets": ["latin"],
                 "dependency": "@fontsource/bebas-neue"
+            }
+        },
+        {
+            "name": "font-playfair-display",
+            "type": "registry:font",
+            "meta": {
+                "category": "fonts",
+                "version": "1.0.0"
+            },
+            "font": {
+                "family": "'Playfair Display Variable', sans-serif",
+                "provider": "google",
+                "import": "PlayfairDisplay",
+                "variable": "--font-playfair-display",
+                "subsets": ["latin"],
+                "dependency": "@fontsource-variable/playfair-display"
             }
         },
         {
@@ -3147,7 +3162,9 @@
             },
             "title": "Glow Radial",
             "author": "designbycode",
-            "registryDependencies": ["https://ui.designbycode.co.za/r/glow-stack.json"],
+            "registryDependencies": [
+                "https://ui.designbycode.co.za/r/glow-stack.json"
+            ],
             "dependencies": ["react", "clsx", "tailwind-merge"],
             "component": "GlowRadial",
             "files": [
@@ -3205,7 +3222,9 @@
             },
             "title": "Use Pixel Canvas",
             "author": "designbycode",
-            "registryDependencies": ["https://ui.designbycode.co.za/r/pixel-canvas.json"],
+            "registryDependencies": [
+                "https://ui.designbycode.co.za/r/pixel-canvas.json"
+            ],
             "dependencies": ["react"],
             "component": "usePixelCanvas",
             "files": [

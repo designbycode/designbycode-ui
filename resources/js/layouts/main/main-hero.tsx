@@ -23,8 +23,13 @@ export default function MainHero() {
                 className={`bg-mute/20 relative isolate grid min-h-100 w-full place-content-center overflow-clip rounded-[inherit] border border-border`}
             >
                 <div className={`space-y-3 p-6`}>
-                    <h1 className="text-center text-5xl font-bold tracking-tighter text-balance md:text-7xl">
-                        Components and{' '}
+                    <h1 className="text-center text-5xl font-black tracking-tighter text-balance md:text-7xl">
+                        <span>Components</span>
+                        <span
+                            className={`inline-block translate-y-4 font-playfair-display text-9xl font-medium italic opacity-50`}
+                        >
+                            &
+                        </span>
                         <TextAnimator
                             text="Animations"
                             animation={`zap`}
