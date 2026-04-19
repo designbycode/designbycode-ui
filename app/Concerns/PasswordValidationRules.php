@@ -24,6 +24,10 @@ trait PasswordValidationRules
      */
     protected function currentPasswordRules(): array
     {
+        if ($this->user()->password === null) {
+            return [];
+        }
+
         return ['required', 'string', 'current_password'];
     }
 }
