@@ -2,7 +2,6 @@
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "name": "designbycode",
     "homepage": "https://ui.designbycode.co.za",
-
     "items": [
         {
             "name": "font-inter",

@@ -4,12 +4,19 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { CSSProperties, ElementType, KeyboardEvent } from 'react';
-import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef } from 'react';
+import React, {
+    forwardRef,
+    useCallback,
+    useEffect,
+    useImperativeHandle,
+    useMemo,
+    useRef,
+} from 'react';
 
 // ─── Animation Type Union ────────────────────────────────────────────────────
 
 export type AnimationType =
-// Fades
+    // Fades
     | 'fadeIn'
     | 'fadeInUp'
     | 'fadeInDown'
@@ -958,7 +965,7 @@ const ANIMATIONS: Partial<Record<AnimationType, AnimationDefinition>> = {
                                         Math.floor(
                                             Math.random() * glitchChars.length,
                                         )
-                                        ] ?? originalText;
+                                    ] ?? originalText;
                             }
                         },
                         [],
@@ -1266,7 +1273,7 @@ const ANIMATIONS: Partial<Record<AnimationType, AnimationDefinition>> = {
                             char.textContent =
                                 charset[
                                     Math.floor(Math.random() * charset.length)
-                                    ] ?? originals[i];
+                                ] ?? originals[i];
                             char.style.opacity = '1';
                             char.style.color = s % 2 === 0 ? color1 : color2;
                         },
@@ -1546,8 +1553,8 @@ const ANIMATIONS: Partial<Record<AnimationType, AnimationDefinition>> = {
                         ease: 'elastic.out(1, 0.5)',
                     },
                     Math.abs(i - center) *
-                    resolveStagger(opts.stagger, 0.04) *
-                    1.5,
+                        resolveStagger(opts.stagger, 0.04) *
+                        1.5,
                 );
             });
         },
@@ -2231,8 +2238,8 @@ const TextAnimator = forwardRef<TextAnimatorRef, TextAnimatorProps>(
             const rawColors = Array.isArray(effectColor)
                 ? effectColor
                 : effectColor
-                    ? [effectColor]
-                    : [];
+                  ? [effectColor]
+                  : [];
             const effectColors =
                 rawColors.length === 1
                     ? [rawColors[0]!, rawColors[0]!]

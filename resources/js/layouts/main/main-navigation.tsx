@@ -15,6 +15,7 @@ import type { UseHeadroomOptions } from '@/registry/new-york/hooks/use-headroom'
 import useHeadroom from '@/registry/new-york/hooks/use-headroom';
 import { home } from '@/routes';
 import { index as animationIndex } from '@/routes/animations';
+import { redirect as authRedirect } from '@/routes/auth';
 
 const links = [
     {
@@ -102,33 +103,41 @@ const MainNavigation = ({ className }: { className?: string }) => {
                                 <ThemeToggle className="grid size-5 place-content-center text-muted-foreground hover:text-foreground" />
                             </NavigationMenuItem>
                             <NavigationMenuItem asChild>
-                                <Button className={`relative`}>
-                                    <GlowRadial
-                                        size={150}
-                                        colors={[
-                                            `oklch(66.6% 0.179 58.318), transparent`,
-                                        ]}
-                                        borderWidth={3}
-                                        className={`absolute -inset-1 blur-xs`}
-                                    />
-                                    <GlowRadial
-                                        size={150}
-                                        colors={[
-                                            `oklch(66.6% 0.179 58.318), transparent`,
-                                        ]}
-                                        borderWidth={2}
-                                        className={`absolute -inset-0.5`}
-                                    />
-                                    <GlowRadial
-                                        size={150}
-                                        colors={[
-                                            `oklch(66.6% 0.179 58.318), transparent`,
-                                        ]}
-                                        borderWidth={2}
-                                        className={`absolute -inset-1.5 mix-blend-color-dodge blur-xs`}
-                                    />
-                                    <Crown className="size-4" />
-                                    <span>Premium</span>
+                                <Button asChild className={`relative`}>
+                                    <a
+                                        href={
+                                            authRedirect({
+                                                provider: 'github',
+                                            }).url
+                                        }
+                                    >
+                                        <GlowRadial
+                                            size={150}
+                                            colors={[
+                                                `oklch(66.6% 0.179 58.318), transparent`,
+                                            ]}
+                                            borderWidth={3}
+                                            className={`absolute -inset-1 blur-xs`}
+                                        />
+                                        <GlowRadial
+                                            size={150}
+                                            colors={[
+                                                `oklch(66.6% 0.179 58.318), transparent`,
+                                            ]}
+                                            borderWidth={2}
+                                            className={`absolute -inset-0.5`}
+                                        />
+                                        <GlowRadial
+                                            size={150}
+                                            colors={[
+                                                `oklch(66.6% 0.179 58.318), transparent`,
+                                            ]}
+                                            borderWidth={2}
+                                            className={`absolute -inset-1.5 mix-blend-color-dodge blur-xs`}
+                                        />
+                                        <Crown className="size-4" />
+                                        <span>Premium</span>
+                                    </a>
                                 </Button>
                             </NavigationMenuItem>
                         </NavigationMenuList>

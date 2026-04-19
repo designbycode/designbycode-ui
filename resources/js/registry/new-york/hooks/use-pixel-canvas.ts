@@ -1,14 +1,18 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { AnimationDirection, PixelConfig, PixelState } from '@/registry/new-york/lib/pixel-canvas';
+import type {
+    AnimationDirection,
+    PixelConfig,
+    PixelState,
+} from '@/registry/new-york/lib/pixel-canvas';
 import {
     calculateDelay,
     createPixelState,
     defaultPixelConfig,
     drawPixel,
     updatePixelAppear,
-    updatePixelDisappear
+    updatePixelDisappear,
 } from '@/registry/new-york/lib/pixel-canvas';
 
 interface UsePixelCanvasOptions extends Partial<PixelConfig> {

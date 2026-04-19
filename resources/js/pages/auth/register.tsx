@@ -1,12 +1,14 @@
-import { Form, Head } from '@inertiajs/react';
+import { Form, Head, Link } from '@inertiajs/react';
 import InputError from '@/components/input-error';
 import PasswordInput from '@/components/password-input';
 import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Separator } from '@/components/ui/separator';
 import { Spinner } from '@/components/ui/spinner';
 import { login } from '@/routes';
+import { redirect as authRedirect } from '@/routes/auth';
 import { store } from '@/routes/register';
 
 export default function Register() {
@@ -94,6 +96,16 @@ export default function Register() {
                                 Create account
                             </Button>
                         </div>
+
+                        <Separator />
+                        <Button asChild variant="outline" type="button">
+                            <Link
+                                href={authRedirect('github')}
+                                prefetch={'hover'}
+                            >
+                                Login with Github
+                            </Link>
+                        </Button>
 
                         <div className="text-center text-sm text-muted-foreground">
                             Already have an account?{' '}

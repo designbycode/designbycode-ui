@@ -1,4 +1,4 @@
-import { Form, Head } from '@inertiajs/react';
+import { Form, Head, Link } from '@inertiajs/react';
 import InputError from '@/components/input-error';
 import PasswordInput from '@/components/password-input';
 import TextLink from '@/components/text-link';
@@ -6,8 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Separator } from '@/components/ui/separator';
 import { Spinner } from '@/components/ui/spinner';
 import { register } from '@/routes';
+import { redirect as authRedirect } from '@/routes/auth';
 import { store } from '@/routes/login';
 import { request } from '@/routes/password';
 
@@ -92,6 +94,27 @@ export default function Login({
                                 {processing && <Spinner />}
                                 Log in
                             </Button>
+                            <Separator />
+                            <div className="grid gap-2">
+                                <Button asChild variant="outline" type="button">
+                                    <Link
+                                        href={authRedirect({
+                                            provider: 'github',
+                                        })}
+                                        prefetch={'hover'}
+                                    >
+                                        Login with Github
+                                    </Link>
+                                </Button>
+                                <Button asChild variant="outline" type="button">
+                                    <Link
+                                        href={authRedirect('google')}
+                                        prefetch={'hover'}
+                                    >
+                                        Login with Google
+                                    </Link>
+                                </Button>
+                            </div>
                         </div>
 
                         {canRegister && (

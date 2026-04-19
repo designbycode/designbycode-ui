@@ -53,7 +53,7 @@ function useHeadroom({
             bottom: false,
             notBottom: true,
         }),
-        []
+        [],
     );
 
     const [state, setState] = useState(getInitialState);

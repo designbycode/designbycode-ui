@@ -703,30 +703,30 @@ function buildSolid(
 // ---------------------------------------------------------------------------
 
 const WavesThree = ({
-                        className,
-                        style = 'grid',
-                        lines = 'both',
-                        colors,
-                        cameraPosition = { x: 0, y: 0, z: 10 },
-                        planeWidth = 80,
-                        planeHeight = 40,
-                        segmentsX = 60,
-                        segmentsY = 30,
-                        speed = 1,
-                        amplitude = 1.5,
-                        frequency = 0.3,
-                        opacity = 0.6,
-                        paused = false,
-                        mouseInfluence = 2,
-                        mouseRotation = 0.1,
-                        dotSize = 3,
-                        dotSizeMin = 1,
-                        crossSize = 0.3,
-                        dashRatio = 0.5,
-                        contourLevels = 6,
-                        maxPixelRatio = 2,
-                        onReady,
-                    }: WavesThreeProps) => {
+    className,
+    style = 'grid',
+    lines = 'both',
+    colors,
+    cameraPosition = { x: 0, y: 0, z: 10 },
+    planeWidth = 80,
+    planeHeight = 40,
+    segmentsX = 60,
+    segmentsY = 30,
+    speed = 1,
+    amplitude = 1.5,
+    frequency = 0.3,
+    opacity = 0.6,
+    paused = false,
+    mouseInfluence = 2,
+    mouseRotation = 0.1,
+    dotSize = 3,
+    dotSizeMin = 1,
+    crossSize = 0.3,
+    dashRatio = 0.5,
+    contourLevels = 6,
+    maxPixelRatio = 2,
+    onReady,
+}: WavesThreeProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [size, setSize] = useState({ width: 0, height: 0 });
 
@@ -1272,8 +1272,8 @@ const WavesThree = ({
                     for (let l = 0; l < contourLevels; l++) {
                         thresholds.push(
                             -amp -
-                            1 +
-                            (l / (contourLevels - 1)) * (amp + 1) * 2,
+                                1 +
+                                (l / (contourLevels - 1)) * (amp + 1) * 2,
                         );
                     }
 
@@ -1360,7 +1360,7 @@ const WavesThree = ({
     return (
         <div
             ref={containerRef}
-            className={cn(`pointer-events-none absolute inset-0 `, className)}
+            className={cn(`pointer-events-none absolute inset-0`, className)}
             aria-hidden="true"
         />
     );
