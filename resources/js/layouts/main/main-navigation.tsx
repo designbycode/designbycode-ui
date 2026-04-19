@@ -1,5 +1,6 @@
 import { Link } from '@inertiajs/react';
 import { Crown } from 'lucide-react';
+import AppLogo from '@/components/app-logo';
 import ThemeToggle from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import {
@@ -64,20 +65,11 @@ const MainNavigation = ({ className }: { className?: string }) => {
             )}
         >
             <Wrapper className="flex items-center justify-between">
-                <Link
-                    prefetch
-                    className={`flex items-center space-x-1 text-xl font-bold tracking-tight focus:outline-offset-4`}
-                    href={home()}
-                >
-                    <span
-                        className={`text-md grid size-7 place-content-center rounded-sm bg-foreground font-semibold text-background`}
-                    >
-                        ui
-                    </span>
-                    <span className="text-md">designbycode</span>
+                <Link prefetch href={home()}>
+                    <AppLogo />
                 </Link>
 
-                <div className="flex items-center space-x-2">
+                <div className="hidden items-center space-x-2 md:flex">
                     <NavigationMenu>
                         <NavigationMenuList className={`space-x-4 text-sm`}>
                             {links.map((link) => (

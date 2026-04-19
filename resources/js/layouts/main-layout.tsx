@@ -33,10 +33,12 @@ export default function MainLayout({
                 <MainNavigation />
                 <Wrapper>
                     {url !== '/' && (
-                        <div
-                            className={`mb-4 border-b border-dashed border-border py-4`}
-                        >
+                        <div className={`relative mb-4 py-4`}>
                             <Breadcrumbs breadcrumbs={breadcrumbs} />
+                            <div
+                                aria-hidden={true}
+                                className={`absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-border to-transparent`}
+                            ></div>
                         </div>
                     )}
                     <main className={`flex-1`}>{children}</main>

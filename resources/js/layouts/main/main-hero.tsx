@@ -23,7 +23,7 @@ export default function MainHero() {
                 className={`bg-mute/20 relative isolate grid min-h-100 w-full place-content-center overflow-clip rounded-[inherit] border border-border`}
             >
                 <div className={`space-y-3 p-6`}>
-                    <h1 className="text-center text-7xl font-bold tracking-tighter text-balance">
+                    <h1 className="text-center text-5xl font-bold tracking-tighter text-balance md:text-7xl">
                         Components and{' '}
                         <TextAnimator
                             text="Animations"
@@ -33,7 +33,7 @@ export default function MainHero() {
                     </h1>
 
                     <p
-                        className={`mx-auto max-w-xl text-center text-lg tracking-wide text-balance`}
+                        className={`mx-auto max-w-xl text-center tracking-wide text-balance md:text-lg`}
                     >
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Accusamus dignissimos exercitationem, nulla

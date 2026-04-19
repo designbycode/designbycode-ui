@@ -20,8 +20,8 @@
       "_wayfinder-CYTaU8YQ.js"
     ]
   },
-  "_breadcrumbs-C7c7oXc4.js": {
-    "file": "assets/breadcrumbs-C7c7oXc4.js",
+  "_breadcrumbs-DlH6pjt3.js": {
+    "file": "assets/breadcrumbs-DlH6pjt3.js",
     "name": "breadcrumbs",
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
@@ -179,13 +179,13 @@
       "_createLucideIcon-D0nWB72R.js"
     ]
   },
-  "_main-layout-LbIB7yeA.js": {
-    "file": "assets/main-layout-LbIB7yeA.js",
+  "_main-layout-BUE3lM4E.js": {
+    "file": "assets/main-layout-BUE3lM4E.js",
     "name": "main-layout",
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
       "_dist-Ch0Gt8r3.js",
-      "_breadcrumbs-C7c7oXc4.js",
+      "_breadcrumbs-DlH6pjt3.js",
       "_button-vajhg3Ld.js",
       "_dist-CVVg1zG4.js",
       "_dist-c4TykWMy.js",
@@ -354,7 +354,7 @@
     "src": "node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-ext-400-normal.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DoNeBF-_.css",
+    "file": "assets/app-CVmxY8Oq.css",
     "name": "app",
     "names": [
       "app.css"
@@ -369,7 +369,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-CRiSVcc_.js",
+    "file": "assets/app-CuQLFfjq.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -377,7 +377,7 @@
       "_wayfinder-CYTaU8YQ.js",
       "_shim-CPzXg0aW.js",
       "_dist-Ch0Gt8r3.js",
-      "_breadcrumbs-C7c7oXc4.js",
+      "_breadcrumbs-DlH6pjt3.js",
       "_button-vajhg3Ld.js",
       "_dist-tLqGZ9jX.js",
       "_dist-CVVg1zG4.js",
@@ -416,7 +416,7 @@
     ]
   },
   "resources/js/pages/animations/animate-css.tsx": {
-    "file": "assets/animate-css-zew98MT5.js",
+    "file": "assets/animate-css-DfQH2-Rm.js",
     "name": "animate-css",
     "src": "resources/js/pages/animations/animate-css.tsx",
     "isDynamicEntry": true,
@@ -426,7 +426,7 @@
       "_ScrollTrigger-QWbgq8A1.js",
       "_button-vajhg3Ld.js",
       "_dist-tLqGZ9jX.js",
-      "_main-layout-LbIB7yeA.js",
+      "_main-layout-BUE3lM4E.js",
       "_createLucideIcon-D0nWB72R.js",
       "_package-manager-select-CKPxaZZE.js",
       "_check-Ci54-djD.js",
@@ -438,23 +438,23 @@
     ]
   },
   "resources/js/pages/animations/canvas.tsx": {
-    "file": "assets/canvas-CWDuK2C0.js",
+    "file": "assets/canvas-BHm12XQt.js",
     "name": "canvas",
     "src": "resources/js/pages/animations/canvas.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
-      "_main-layout-LbIB7yeA.js"
+      "_main-layout-BUE3lM4E.js"
     ]
   },
   "resources/js/pages/animations/index.tsx": {
-    "file": "assets/animations-CFhEnLop.js",
+    "file": "assets/animations-BC3UJE1P.js",
     "name": "animations",
     "src": "resources/js/pages/animations/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
-      "_main-layout-LbIB7yeA.js",
+      "_main-layout-BUE3lM4E.js",
       "_waves-three-CsDZmFdT.js",
       "_card-CIJIPlXn.js",
       "_text-animator-DThik2RU.js",
@@ -462,14 +462,14 @@
     ]
   },
   "resources/js/pages/animations/text-animator.tsx": {
-    "file": "assets/text-animator-BmkyIAI6.js",
+    "file": "assets/text-animator--nfu7lbQ.js",
     "name": "text-animator",
     "src": "resources/js/pages/animations/text-animator.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
       "_button-vajhg3Ld.js",
-      "_main-layout-LbIB7yeA.js",
+      "_main-layout-BUE3lM4E.js",
       "_package-manager-select-CKPxaZZE.js",
       "_dist-BPwEMwc0.js",
       "_card-CIJIPlXn.js",
@@ -479,13 +479,13 @@
     ]
   },
   "resources/js/pages/animations/three.tsx": {
-    "file": "assets/three-BD7egS63.js",
+    "file": "assets/three-DR5l1b51.js",
     "name": "three",
     "src": "resources/js/pages/animations/three.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
-      "_main-layout-LbIB7yeA.js"
+      "_main-layout-BUE3lM4E.js"
     ]
   },
   "resources/js/pages/auth/confirm-password.tsx": {
@@ -618,14 +618,14 @@
     ]
   },
   "resources/js/pages/home.tsx": {
-    "file": "assets/home-Ces7ltSH.js",
+    "file": "assets/home-CvOFPIPQ.js",
     "name": "home",
     "src": "resources/js/pages/home.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_wayfinder-CYTaU8YQ.js",
       "_button-vajhg3Ld.js",
-      "_main-layout-LbIB7yeA.js",
+      "_main-layout-BUE3lM4E.js",
       "_waves-three-CsDZmFdT.js",
       "_text-animator-DThik2RU.js"
     ]
