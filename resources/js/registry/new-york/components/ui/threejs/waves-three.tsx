@@ -108,8 +108,8 @@ export interface WavesThreeProps {
 // Constants
 // ---------------------------------------------------------------------------
 
-const DEFAULT_LIGHT: string[] = ['#3b82f6', '#8b5cf6'];
-const DEFAULT_DARK: string[] = ['#667eea', '#f472b6'];
+const DEFAULT_LIGHT: string[] = ['#525252', '#525252'];
+const DEFAULT_DARK: string[] = ['#444444', '#757575'];
 
 // ---------------------------------------------------------------------------
 // Color helpers
