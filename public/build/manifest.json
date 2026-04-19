@@ -395,7 +395,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-1-KSuKpk.js",
+    "file": "assets/app-BbfJrZfX.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -677,7 +677,7 @@
     ]
   },
   "resources/js/pages/settings/connected-accounts.tsx": {
-    "file": "assets/connected-accounts-B6dxoXr_.js",
+    "file": "assets/connected-accounts-CI04MHFi.js",
     "name": "connected-accounts",
     "src": "resources/js/pages/settings/connected-accounts.tsx",
     "isDynamicEntry": true,

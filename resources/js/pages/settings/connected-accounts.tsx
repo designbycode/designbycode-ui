@@ -1,6 +1,5 @@
-import { Form, Head, usePage } from '@inertiajs/react';
+import { Head, router, usePage } from '@inertiajs/react';
 import { Github, Globe, Link2, Loader2, Unlink } from 'lucide-react';
-import type { FormEventHandler } from 'react';
 import { useState } from 'react';
 import Heading from '@/components/heading';
 import InputError from '@/components/input-error';
@@ -42,14 +41,12 @@ export default function ConnectedAccounts({
     const { errors } = usePage<{ errors: Record<string, string> }>().props;
     const [disconnecting, setDisconnecting] = useState<string | null>(null);
 
-    const handleDisconnect: FormEventHandler = (e) => {
-        e.preventDefault();
-        const form = e.currentTarget as HTMLFormElement;
-        const provider = form.dataset.provider;
+    const handleDisconnect = (provider: string) => {
+        setDisconnecting(provider);
 
-        if (provider) {
-            setDisconnecting(provider);
-        }
+        router.delete(`/settings/connected-accounts/${provider}`, {
+            onFinish: () => setDisconnecting(null),
+        });
     };
 
     return (
@@ -85,31 +82,26 @@ export default function ConnectedAccounts({
                                                     {label}
                                                 </CardTitle>
                                             </div>
-                                            <Form
-                                                method="delete"
-                                                data-provider={account.provider}
-                                                onSubmit={handleDisconnect}
+                                            <Button
+                                                variant="outline"
+                                                size="sm"
+                                                disabled={
+                                                    disconnecting ===
+                                                    account.provider
+                                                }
+                                                onClick={() =>
+                                                    handleDisconnect(
+                                                        account.provider,
+                                                    )
+                                                }
                                             >
-                                                {({ processing }) => (
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        type="submit"
-                                                        disabled={
-                                                            processing ||
-                                                            disconnecting ===
-                                                                account.provider
-                                                        }
-                                                    >
-                                                        {disconnecting ===
-                                                            account.provider && (
-                                                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                                        )}
-                                                        <Unlink className="mr-2 h-4 w-4" />
-                                                        Disconnect
-                                                    </Button>
+                                                {disconnecting ===
+                                                    account.provider && (
+                                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                                 )}
-                                            </Form>
+                                                <Unlink className="mr-2 h-4 w-4" />
+                                                Disconnect
+                                            </Button>
                                         </CardHeader>
                                         <CardContent>
                                             <CardDescription>
