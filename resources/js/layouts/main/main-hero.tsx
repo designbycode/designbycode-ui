@@ -3,12 +3,19 @@ import { Button } from '@/components/ui/button';
 import TextAnimator from '@/registry/new-york/components/ui/animations/text-animator';
 import { GlowRadial } from '@/registry/new-york/components/ui/glow/glow-radial';
 import WavesThree from '@/registry/new-york/components/ui/threejs/waves-three';
+import useDarkMode from '@/registry/new-york/hooks/use-dark-mode';
 
 export default function MainHero() {
+    const isDark = useDarkMode();
+    const colors = isDark
+        ? ['rgba(255, 255, 255, 0.25)', 'rgba(255, 255, 255, 0.25)']
+        : ['rgba(0, 0, 0, 0.25)', 'rgba(0, 0, 0, 0.25)'];
+
     return (
         <div className={`relative mt-4 rounded-2xl`}>
-            <GlowRadial className={`absolute inset-0`} />
+            <GlowRadial colors={colors} className={`absolute inset-0`} />
             <GlowRadial
+                colors={colors}
                 borderWidth={15}
                 className={`absolute -inset-2 opacity-25 blur-xs`}
             />
@@ -63,16 +70,19 @@ export default function MainHero() {
                         </Button>
                         <Button className={`relative`} variant="secondary">
                             <GlowRadial
+                                colors={colors}
                                 size={150}
                                 borderWidth={3}
                                 className={`absolute -inset-1 blur-xs`}
                             />
                             <GlowRadial
+                                colors={colors}
                                 size={150}
                                 borderWidth={2}
                                 className={`absolute -inset-0.5`}
                             />
                             <GlowRadial
+                                colors={colors}
                                 size={150}
                                 borderWidth={2}
                                 className={`absolute -inset-1.5 mix-blend-color-dodge blur-xs`}

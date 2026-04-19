@@ -255,8 +255,18 @@ export default function AnimationAnimator() {
                                     </ul>
                                 </CardContent>
                             </Card>
-                            <Card className="absolute inset-x-0 -translate-y-5 scale-80 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/15" />
-                            <Card className="absolute inset-x-0 -translate-y-9 scale-90 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/20" />
+                            <Card className="absolute inset-x-0 -translate-y-5 scale-80 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/15">
+                                <GlowRadial
+                                    borderWidth={1}
+                                    className={`absolute inset-0 opacity-15`}
+                                />
+                            </Card>
+                            <Card className="absolute inset-x-0 -translate-y-9 scale-90 bg-linear-to-b from-background to-muted/50 p-6 shadow-md shadow-black/20">
+                                <GlowRadial
+                                    borderWidth={1}
+                                    className={`absolute inset-0 opacity-25`}
+                                />
+                            </Card>
                         </div>
                     </div>
 
